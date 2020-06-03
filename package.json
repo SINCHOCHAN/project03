@@ -1,0 +1,52 @@
+{
+  "name": "SportsApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node index.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^2.14.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "jwt-simple": "^0.5.6",
+    "lodash": "^4.17.15",
+    "material-auto-rotating-carousel": "^3.0.2",
+    "material-table": "^1.58.2",
+    "moment": "^2.25.1",
+    "mongoose": "^5.9.10",
+    "nodemon": "^2.0.4",
+    "nuka-carousel": "^4.7.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "react-slick": "^0.26.1",
+    "react-swipeable-views": "^0.13.9",
+    "semantic-ui-carousel-react": "^1.1.1",
+    "simple-react-validator": "^1.4.6",
+    "slick-carousel": "^1.8.1",
+    "validator": "^13.0.0"
+  }
+}

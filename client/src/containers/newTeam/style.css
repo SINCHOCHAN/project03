@@ -1,0 +1,16 @@
+.homapgecontainer {
+  color:white;
+  height: 85vh;
+}
+.image{
+  width:100%;
+  height:100%;
+}
+.footer{
+  width : 100%;
+}
+
+body{
+  background: #000000;
+
+}
